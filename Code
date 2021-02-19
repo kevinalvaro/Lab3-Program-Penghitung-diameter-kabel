@@ -1,0 +1,36 @@
+#Program penghitung ukuran diameter kabel
+#By Kevin Alvaro Adianto
+
+print("==========Program Penghitung ukuran diameter kabel==========")
+print("Max input watt adalah 18.000 watt (18KVA) dengan voltase 220")
+
+try:
+#minta inputan dari user
+    watt=int(input("Masukkan Daya (watt): "))
+
+#mencari Arus
+    amp=watt/220
+    print(amp)
+
+#perhitungan
+    if amp >=0 and amp<= 12:
+        print("0,75mm")
+    elif amp >12 and amp <=15:
+        print("1mm")
+    elif amp >15 and amp <=18:
+        print("1.5mm")
+    elif amp >18 and amp <=26:
+        print("2.5mm")
+    elif amp >26 and amp <=34:
+        print("4mm")
+    elif amp >34 and amp <=44:
+        print("6mm")
+    elif amp >44 and amp <=61:
+        print("10mm")
+    elif amp >61 and amp <=82:
+        print("16mm")
+    else:
+        print("Program error menghitung diameter, input watt diluar jangkauan, mohon memasukkan lagi")
+
+except:
+    print("Program error mohon memasukkan bilangan bulat")
